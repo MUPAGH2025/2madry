@@ -7,7 +7,7 @@ jobs:
       - run: sudo apt-get install inkscape pandoc texlive-xetex
       - uses: actions/checkout@v4
       - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy 
-      - run: python -m nbconvert --to pdf --execute lab1.ipynb
+      - run: python -m nbconvert --to pdf --execute mpdata_2d_numpy_only.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: lab1.pdf
+          path: mpdata_2d_numpy_only.pdf
