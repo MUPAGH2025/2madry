@@ -1,13 +1,13 @@
-name: sprawozdanie
+name: projekt
 on: push
 jobs:
   job:
     runs-on: ubuntu-22.04
     steps:
-      - run: sudo apt-get install inkscape pandoc texlive-xetex
+      - run: sudo apt-get install inkscape pandoc texlive-xetex texlive-latex-extra
       - uses: actions/checkout@v4
-      - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy 
-      - run: python -m nbconvert --to pdf --execute mpdata_2d_numpy_only.ipynb
+      - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy matplotlib
+      - run: python -m nbconvert --to pdf --execute projekt.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: anim.gif
+          path: projekt.pdf
