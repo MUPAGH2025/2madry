@@ -7,7 +7,7 @@ jobs:
       - run: sudo apt-get install inkscape pandoc texlive-xetex texlive-latex-extra
       - uses: actions/checkout@v4
       - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy matplotlib PyMPDATA
-      - run: python -m nbconvert --to pdf --execute projekt.ipynb
+      - run: python -m nbconvert --to pdf --execute Projekt.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: projekt.pdf
+          path: Projekt.pdf
