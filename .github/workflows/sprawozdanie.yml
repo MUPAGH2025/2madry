@@ -1,4 +1,4 @@
-name: projekt
+name: Projekt
 on: push
 jobs:
   job:
